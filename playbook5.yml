@@ -7,7 +7,7 @@
         src: file200
         dest: /tmp
 - name: copy file  contrller to server
-  hosts: 172.31.6.177
+  hosts: mygroup
   tasks:
     - name: copy file200
       copy:

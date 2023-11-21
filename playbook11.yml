@@ -1,0 +1,15 @@
+---
+- name: loops with using with_items
+  hosts: all
+  tasks:
+    - name: installing s/w
+      apt:
+        name: "{{item}}"
+        state: present
+        update_cache: no
+      with_items:
+        - tree
+        - git
+        - maven
+...
+

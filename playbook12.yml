@@ -1,0 +1,9 @@
+---
+- name: installing s/w
+  hosts: all
+  tasks:
+    - name: installing s/w 
+      apt:
+        name: [ "git" ,"tree","maven"]
+        state: present
+...

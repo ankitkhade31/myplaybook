@@ -1,0 +1,10 @@
+---
+- name: Implementing group host variable
+  hosts: mygroup
+  tasks:
+    - name: install firewalld
+      apt:
+        name: "{{a}}"
+        state: "{{b}}"
+        update_cache: "{{c}}"
+...

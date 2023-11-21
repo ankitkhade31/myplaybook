@@ -1,0 +1,18 @@
+---
+ - name: Implementing play scope variable
+   hosts: all
+   vars:
+     - a: tomcat9
+     - b: present
+     - c: yes
+   tasks:
+     - name: install/uninstall app
+       apt:
+         name: "{{a}}"
+         state: "{{b}}"
+         update_cache: "{{c}}"
+     - name: create file in all server
+       file:
+         name: /tmp/ankit
+         state: touch
+...

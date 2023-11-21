@@ -1,0 +1,14 @@
+---
+- name: implementing when condition
+  hosts: all
+  vars:
+    - a: 10
+  gather_facts: false
+  become: yes
+  tasks:
+    - name: copy passwd file
+      copy:
+        src: /etc/passwd
+        dest: /tmp
+      when: a == 10
+...
